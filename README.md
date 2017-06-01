@@ -1,8 +1,7 @@
-# **Finding Lane Lines on the Road** 
-
+# Project1_FindingLanes
 ---
 
-**Finding Lane Lines on the Road**
+# **Finding Lane Lines on the Road**
 
 The goals / steps of this project are the following:
 * Make a video processing pipeline that finds lane lines on the road 
@@ -11,14 +10,14 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./images/grayscale.jpg "Grayscale"
-[image2]: ./images/solidYellowCurve2.jpg "SolidWhiteCurve"
-[image3]: ./images/solidYellowCurve2_out.jpg "SolidWhiteCurveOutput"
+[image1]: ./examples/grayscale.jpg "Grayscale"
+[image2]: ./test_images/solidYellowCurve2.jpg "SolidWhiteCurve"
+[image3]: ./test_images_out/solidYellowCurve2_out.jpg "SolidWhiteCurveOutput"
 ---
 
 ### Reflection
 
-### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
+### Description of the pipeline.
 
 My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I used gaussian blurring followed by canny edge detection to find the edges in the image. The edge images are masked using a region of interest which is specified as a polygon and fed to the hough transform which identifies straight lines in the edge images. 
 
@@ -49,4 +48,3 @@ Also something to keep in mind is that when cars cut in and out of our vehicle's
 Further there are edge cases where the lanes at exit signs are often bifurcated or split into multiple lanes. For such cases we need to consider fitting a piecewise spline model with 2 segments.
 
 A nice enhacement would be to additionally detect the nature of the lane and classify it as "solid" or "dashed" and "white or "yellow".
-# Project1_FindingLanes
