@@ -18,9 +18,11 @@ My pipeline consisted of 5 steps. First, I converted the images to grayscale, th
 I modified the provided draw_lines() baseline function implementation to then identify the left and right lanes using ransac (Random Sample Consensus) and plot them in green and red colors. The [RANSAC](https://en.wikipedia.org/wiki/Random_sample_consensus) algorithm fits two straight line models, one each for the left and right lanes to the points in each of the line segments returned from the hough transform lines.
 
 #### Example Images and the correspoding output
+Input Image
 ![example image from video](/test_images/solidYellowCurve2.jpg)
 
-![output of the algorithm] (/test_images_out/solidYellowCurve2_out.jpg)
+Output Image
+![output of the algorithm] (/test_images/solidYellowCurve2_out.jpg)
 
 ### Potential shortcomings with the current pipeline
 
