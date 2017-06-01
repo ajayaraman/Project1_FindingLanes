@@ -7,12 +7,6 @@ The goals / steps of this project are the following:
 * Make a video processing pipeline that finds lane lines on the road 
 * Reflect on the work in a written report
 
-
-[//]: # (Image References)
-
-[image1]: ./examples/grayscale.jpg "Grayscale"
-[image2]: ./test_images/solidYellowCurve2.jpg "SolidWhiteCurve"
-[image3]: ./test_images_out/solidYellowCurve2_out.jpg "SolidWhiteCurveOutput"
 ---
 
 ### Reflection
@@ -21,11 +15,11 @@ The goals / steps of this project are the following:
 
 My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I used gaussian blurring followed by canny edge detection to find the edges in the image. The edge images are masked using a region of interest which is specified as a polygon and fed to the hough transform which identifies straight lines in the edge images. 
 
-I modified the provided draw_lines() baseline function implementation to then identify the left and right lanes using ransac (Random Sample Consensus) and plot them in green and red colors. The RANSAC(https://en.wikipedia.org/wiki/Random_sample_consensus) algorithm fits two straight line models, one each for the left and right lanes to the points in each of the line segments returned from the hough transform lines.
+I modified the provided draw_lines() baseline function implementation to then identify the left and right lanes using ransac (Random Sample Consensus) and plot them in green and red colors. The [RANSAC](https://en.wikipedia.org/wiki/Random_sample_consensus) algorithm fits two straight line models, one each for the left and right lanes to the points in each of the line segments returned from the hough transform lines.
 
 #### Example Images and the correspoding output
-![example image from video] [image2]
-![output of the algorithm] [image3]
+![example image from video](./test_images/solidYellowCurve2.jpg?raw=True "SolidWhiteCurve")
+![output of the algorithm] (./test_images_out/solidYellowCurve2_out.jpg?raw=True "SolidWhiteCurveOutput")
 
 ### Potential shortcomings with the current pipeline
 
