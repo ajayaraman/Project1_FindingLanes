@@ -22,7 +22,7 @@ Input Image
 ![example image from video](/test_images/solidYellowCurve2.jpg)
 
 Output Image
-![output of the algorithm] (/test_images/solidYellowCurve2_out.jpg)
+![output](/test_images_out/solidYellowCurve2_out.jpg)
 
 ### Potential shortcomings with the current pipeline
 
